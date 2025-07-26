@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC - Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylemobile.css">
+
+
+</head>
+
+<body>
+    
+<section class="container">
+
+    
+
+    <div class="calculadora-container">
+        <h1>IMC Calculadora</h1>
+        <p>Preencha os dados abaixo</p>
+        <p class="mobile-warning">Preencha os dados abaixo</p>
+        
+
+        <div class="inputs">
+
+            <div class="inputs-box">
+
+                <img width="20" height="20" src="https://img.icons8.com/color/48/weight-kg.png" alt="weight-kg"/>
+                <input type="number"  id="peso" placeholder="Seu peso?">
+                <p>KG</p>
+
+            </div>
+
+            <div class="inputs-box">
+
+                <img width="20" height="20" src="https://img.icons8.com/external-wanicon-two-tone-wanicon/64/external-height-health-checkup-wanicon-two-tone-wanicon.png" alt="external-height-health-checkup-wanicon-two-tone-wanicon"/>
+                <input type="number"  id="altura" placeholder="Sua altura? ex: 1.70">
+                <p>M</p>
+
+            </div>
+
+            <div class="inputs-box">
+
+                <img width="20" height="20" src="https://img.icons8.com/stickers/100/age.png" alt="age"/>
+                <input type="number"  id="idade" placeholder="Qual sua idade?">
+                <p>Nº</p>
+
+            </div>
+        
+        </div>
+
+        <div class="botoes">
+
+            <button type="button" onclick="calcular()">Calcular</button>
+            <button type="button"onclick="resetar()">Resetar</button>
+
+        </div>
+    </div>
+
+
+
+    <div class="container-descricao">
+
+        <div class="resultados">
+
+            <h1>Resultados</h1>
+
+            <h2 id="imc"><h2>
+
+            <p id="classificacao"></p>
+
+            <p id="idadetxt"></p>
+
+            <p id="descricao"></p>
+
+        </div>
+
+        <div class="descricao">
+
+            <h1>classificação do IMC</h1>
+
+            <div class="descricao-box">
+                <p>Menor que 18.5</p>
+                =
+                <p>Abaixo do peso</p>
+            </div>
+
+            <div class="descricao-box">
+                <p>18.5 a 24.9</p>
+                =
+                <p>Peso ideal</p>
+            </div>
+
+            <div class="descricao-box">
+                <p>25 a 29.9</p>
+                =
+                <p>Sobrepeso</p>
+            </div>
+
+            <div class="descricao-box">
+                <p>30 a 34.9</p>
+                =
+                <p>Obesidade grau 1</p>
+            </div>
+
+            <div class="descricao-box">
+                <p>35 a 39.9</p>
+                =
+                <p>Obesidade grau 2</p>
+            </div>
+
+            <div class="descricao-box">
+                <p>Maior que 40</p>
+                =
+                <p>Obesidade grau 3</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

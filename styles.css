@@ -1,0 +1,285 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kameron", serif;
+}
+
+body {
+    background-color: #19171B;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    overflow-x: hidden;
+   
+}
+
+.container {
+    padding: 8rem;
+    width: 100%;
+    display: flex;
+}
+
+
+
+.calculadora-container {
+    background-color:rgb(63, 58, 58);
+    border: 4px;
+    width: 400px;
+    height: 480px;
+    padding: 2rem;
+    border-radius: 12px 0px 12px 0px;
+    box-shadow: #7B47D2 0px 20px 30px -10px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 6rem;
+    margin-bottom: 8px;
+}
+
+
+.calculadora-container h1 {
+    font-family: "Krona One", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #7B47D2;
+    padding: 9px;
+    margin-bottom: 1rem;
+    background: radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fundoAnimado 5s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes fundoAnimado {
+
+    0% { background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.calculadora-container p {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+
+.mobile-warning {
+    display: none;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.inputs-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    height: 42px;
+    margin: 18px;
+    background-color:rgb(78, 72, 72);
+    width: 100%;
+    border-radius: 12px 0px 12px 0px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.inputs-box input {
+    background-color: rgb(78, 72, 72);
+    padding: 5px;
+    text-align: center;
+    color: #00d5ff;
+    font-weight: bolder;
+    border: none;
+}
+
+.inputs-box input::-webkit-outer-spin-button,
+.inputs-box input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.inputs-box input:focus {
+    outline: none;
+}
+
+.inputs-box:hover {
+    border: 1px solid rgb(89, 47, 255);
+    transition: .9s;
+}
+
+.inputs-box p {
+    background: radial-gradient(circle,rgba(23, 174, 255, 0.66) 0%, rgb(255, 255, 255) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fundoAnimado 5s ease infinite;
+    background-size: 200% 200%;
+    font-weight: bolder;
+}
+
+
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;  
+}
+
+.botoes button {
+    padding: 8px;
+    width: 100px;
+    color: rgb(115, 31, 231);
+    background-color: white;
+    border-radius: 5px 0px 5px 0px;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    z-index: 1;
+    transition: .5s;
+    font-weight: bold;
+    font-family: "Kameron", serif;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    
+
+}
+
+.botoes button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.botoes button::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    animation: fundoAnimado 5s ease infinite;
+    background-size: 200% 200%;
+    width: 100%;
+    height: 100%;
+    transition: transform .5s;
+    transform: scaleX(0);
+    transform-origin: right;
+    z-index: -1;
+}
+
+.botoes button:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+.container-descricao {
+    background-color: rgb(63, 58, 58);
+    width: 750px;
+    border-radius: 12px 0px 12px 0px;
+    box-shadow: #7B47D2 0px 20px 30px -10px;    
+    display: flex;
+    padding: 1rem;
+    
+}
+
+.resultados {
+    width: 350px;
+    height: 400px;
+    padding: 1rem;
+    border-right: 2px solid #7B47D2;
+}
+
+.resultados h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 2rem;
+}
+
+.resultados h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-bottom: 2rem;
+    color: #ffffffbb;
+    letter-spacing: 1px;
+}
+
+.resultados p {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    
+}
+
+#descricao {
+    font-size: 13px;
+    color: white;
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    padding: 20px;
+}
+
+.descricao {
+    width: 350px;
+    height: 400px;
+    padding: 1rem;
+    
+}
+
+.descricao h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    margin-left: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.descricao-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    padding: 2px;
+    margin-left: 1.7rem;
+    
+}
+
+.descricao-box p {
+    border: 1px solid white;
+    border-radius: 12px 0px 12px 0px;
+    padding: 8px;
+    margin: 8px;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid #7B47D2;
+    
+}
+
+
+
+
+
